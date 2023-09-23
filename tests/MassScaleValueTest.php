@@ -57,4 +57,10 @@ class MassScaleValueTest extends TestCase
         $result = $converter->fromMicro()->toQuintal();
         $this->assertSame(0.00000000003, $result->raw());
     }
+    public function testFromQuintalToKilo()
+    {
+        $converter = MassScaler::unit(30);
+        $result = $converter->fromQuintal()->toKilo();
+        $this->assertSame(3000, $result->raw());
+    }
 }
