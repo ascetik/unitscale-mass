@@ -22,7 +22,6 @@ class MassScaleAdjustTest extends TestCase
     public function testShouldLimitResultScaleToQuintal()
     {
         $adjusted = MassScaler::adjust(3000000)->toQuintal();
-        echo $adjusted . PHP_EOL;
         $this->assertSame('30q', (string) $adjusted);
     }
 

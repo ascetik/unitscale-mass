@@ -70,12 +70,7 @@ class MassScaleValue extends ScaleValue
     ) {
         parent::__construct($value, $scale);
     }
-
-    public function __call($method, $arguments)
-    {
-        echo 'calling' . PHP_EOL;
-        return parent::__call($method, $arguments);
-    }
+    
     /** @override */
     public function getUnit(): string
     {
