@@ -9,6 +9,7 @@
     <testsuites>
         <testsuite name="Unit Scale">
             <file>tests/MassScaleValueTest.php</file>
+            <file>tests/MassScaleAdjustTest.php</file>
         </testsuite>
     </testsuites>
     <php>

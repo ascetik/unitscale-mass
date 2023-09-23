@@ -35,4 +35,9 @@ class MassScaleFactory extends CustomScaleFactory
     {
         return new MassScale(6, 't');
     }
+
+    public function mega()
+    {
+        return $this->ton();
+    }
 }
