@@ -5,9 +5,10 @@ declare(strict_types=1);
 namespace Ascetik\UnitscaleMass\Tests;
 
 use Ascetik\UnitscaleMass\Factories\MassScaler;
+use Ascetik\UnitscaleMass\Values\MassScaleValue;
 use PHPUnit\Framework\TestCase;
 
-class MassScaleConverterTest extends TestCase
+class MassScaleValueTest extends TestCase
 {
     public function testConversionFromQuintal()
     {
@@ -15,7 +16,7 @@ class MassScaleConverterTest extends TestCase
         $this->assertSame('3g', (string) $converter);
         $quintal = $converter->fromQuintal();
         $this->assertInstanceOf(MassScaleValue::class,$quintal);
-        $this->assertSame('3q', $quintal);
+        $this->assertSame('3q',(string)  $quintal);
     }
 
     public function testFromKiloToQuintal()
@@ -23,7 +24,7 @@ class MassScaleConverterTest extends TestCase
         $converter = MassScaler::unit(3000);
         $result = $converter->fromKilo()->toQuintal();
         $this->assertSame(30, $result->raw());
-        $this->assertSame('30q', $result);
+        $this->assertSame('30q',(string) $result);
     }
 
     public function testConversionFromTon()
@@ -31,7 +32,7 @@ class MassScaleConverterTest extends TestCase
         $converter = MassScaler::unit(3);
         $ton = $converter->fromTon();
         $this->assertInstanceOf(MassScaleValue::class,$ton);
-        $this->assertSame('3t', $ton);
+        $this->assertSame('3t', (string) $ton);
     }
 
     public function testFromKiloToTon()
@@ -39,7 +40,7 @@ class MassScaleConverterTest extends TestCase
         $converter = MassScaler::unit(3000);
         $result = $converter->fromKilo()->toTon();
         $this->assertSame(3, $result->raw());
-        $this->assertSame('3t', $result);
+        $this->assertSame('3t', (string) $result);
     }
 
     public function testFromTonToMilli()
@@ -49,6 +50,7 @@ class MassScaleConverterTest extends TestCase
         $this->assertSame(3000000000000, $result->raw());
         // $this->assertSame('3t', $result);
     }
+    
     public function testFromMilliToQuintal()
     {
         $converter = MassScaler::unit(3);
