@@ -4,8 +4,93 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f602543b8a2efdafe5f942c1b8a008a5",
-    "packages": [],
+    "content-hash": "be586baa76fad6904304b80dadf754f3",
+    "packages": [
+        {
+            "name": "ascetik/storage",
+            "version": "v0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ascetik/storage.git",
+                "reference": "f1c7f98511cc8194a98573ff8fd42c309d14817a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ascetik/storage/zipball/f1c7f98511cc8194a98573ff8fd42c309d14817a",
+                "reference": "f1c7f98511cc8194a98573ff8fd42c309d14817a",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^10.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Ascetik\\Storage\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "ascetik",
+                    "email": "ascetik@free.fr"
+                }
+            ],
+            "description": "Simple SplObjectStorage extension",
+            "support": {
+                "issues": "https://github.com/ascetik/storage/issues",
+                "source": "https://github.com/ascetik/storage/tree/v0.2.0"
+            },
+            "time": "2023-09-19T17:32:00+00:00"
+        },
+        {
+            "name": "ascetik/unitscale-core",
+            "version": "v0.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ascetik/unitscale-core.git",
+                "reference": "c749256375d3966086f7a0f4eefd1753fe4f8695"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ascetik/unitscale-core/zipball/c749256375d3966086f7a0f4eefd1753fe4f8695",
+                "reference": "c749256375d3966086f7a0f4eefd1753fe4f8695",
+                "shasum": ""
+            },
+            "require": {
+                "ascetik/storage": "^0.2",
+                "php": "^8.0|^8.1|^8.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^10.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Ascetik\\UnitscaleCore\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "ascetik",
+                    "email": "ascetik@free.fr"
+                }
+            ],
+            "description": "Tool handling scale unit conversions form pico to tera",
+            "support": {
+                "issues": "https://github.com/ascetik/unitscale-core/issues",
+                "source": "https://github.com/ascetik/unitscale-core/tree/v0.2.1"
+            },
+            "time": "2023-09-23T15:07:32+00:00"
+        }
+    ],
     "packages-dev": [
         {
             "name": "myclabs/deep-copy",
