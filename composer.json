@@ -11,6 +11,11 @@
       "Ascetik\\UnitscaleMass\\": "src/"
     }
   },
+  "autoload-dev": {
+    "psr-4": {
+      "Ascetik\\UnitscaleMass\\Tests\\": "tests/"
+    }
+  },
   "authors": [
     {
       "name": "ascetik",
