@@ -23,6 +23,6 @@
     }
   ],
   "require": {
-    "ascetik/unitscale-core": "^0.2"
+    "ascetik/unitscale-core": "0.2.1"
   }
 }
