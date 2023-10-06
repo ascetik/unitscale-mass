@@ -18,7 +18,6 @@ use Ascetik\UnitscaleCore\Extensions\AdjustedValue;
 use Ascetik\UnitscaleCore\Types\Scale;
 use Ascetik\UnitscaleCore\Types\ScaleFactory;
 use Ascetik\UnitscaleCore\Types\ScaleValue;
-use Ascetik\UnitscaleMass\Extensions\AdjustedMassValue;
 use Ascetik\UnitscaleMass\Factories\MassScaleFactory;
 use Ascetik\UnitscaleMass\Scales\MassScale;
 
@@ -29,20 +28,6 @@ use Ascetik\UnitscaleMass\Scales\MassScale;
  * fromMega and toMega are available,
  * not documented...
  *
- * @method self fromTera()
- * @method self fromGiga()
- * @method self fromTon()
- * @method self fromQuintal()
- * @method self fromKilo()
- * @method self fromHecto()
- * @method self fromDeca()
- * @method self fromBase()
- * @method self fromDeci()
- * @method self fromCenti()
- * @method self fromMilli()
- * @method self fromMicro()
- * @method self fromNano()
- * @method self fromPico()
  * @method self toTera()
  * @method self toGiga()
  * @method self toTon()
