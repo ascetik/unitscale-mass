@@ -4,7 +4,7 @@ An extension of unitscale to use with mass unit (g, gramms), including quintal a
 
 ## Release notes
 
-Version 0.2
+Version 1.0.0
 
 - Had to follow core package updates
 
