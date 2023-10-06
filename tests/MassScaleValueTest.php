@@ -14,53 +14,48 @@ class MassScaleValueTest extends TestCase
     {
         $converter = MassScaler::unit(3);
         $this->assertSame('3g', (string) $converter);
-        $quintal = $converter->fromQuintal();
+        $quintal = MassScaler::fromQuintal(3);
         $this->assertInstanceOf(MassScaleValue::class,$quintal);
         $this->assertSame('3q',(string)  $quintal);
     }
 
     public function testFromKiloToQuintal()
     {
-        $converter = MassScaler::unit(3000);
-        $result = $converter->fromKilo()->toQuintal();
+        // $converter = MassScaler::unit(3000);
+        $result = MassScaler::fromKilo(3000)->toQuintal();
         $this->assertSame(30, $result->raw());
         $this->assertSame('30q',(string) $result);
     }
 
     public function testConversionFromTon()
     {
-        $converter = MassScaler::unit(3);
-        $ton = $converter->fromTon();
+        $ton = MassScaler::fromTon(3);
         $this->assertInstanceOf(MassScaleValue::class,$ton);
         $this->assertSame('3t', (string) $ton);
     }
 
     public function testFromKiloToTon()
     {
-        $converter = MassScaler::unit(3000);
-        $result = $converter->fromKilo()->toTon();
+        $result = MassScaler::fromKilo(3000)->toTon();
         $this->assertSame(3, $result->raw());
         $this->assertSame('3t', (string) $result);
     }
 
     public function testFromTonToMilli()
     {
-        $converter = MassScaler::unit(3000);
-        $result = $converter->fromTon()->toMilli();
+        $result = MassScaler::fromTon(3000)->toMilli();
         $this->assertSame(3000000000000, $result->raw());
         // $this->assertSame('3t', $result);
     }
     
     public function testFromMilliToQuintal()
     {
-        $converter = MassScaler::unit(3);
-        $result = $converter->fromMicro()->toQuintal();
+        $result = MassScaler::fromMicro(3)->toQuintal();
         $this->assertSame(0.00000000003, $result->raw());
     }
     public function testFromQuintalToKilo()
     {
-        $converter = MassScaler::unit(30);
-        $result = $converter->fromQuintal()->toKilo();
+        $result = MassScaler::fromQuintal(30)->toKilo();
         $this->assertSame(3000, $result->raw());
     }
 }
