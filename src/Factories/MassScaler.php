@@ -21,20 +21,20 @@ use Ascetik\UnitscaleMass\Values\MassScaleValue;
 /**
  * Build MassScaleValues
  *
- * @method MassScaleValue fromTera(int|float|null $value)
- * @method MassScaleValue fromGiga(int|float|null $value)
- * @method MassScaleValue fromTon(int|float|null $value)
- * @method MassScaleValue fromQuintal(int|float|null $value)
- * @method MassScaleValue fromKilo(int|float|null $value)
- * @method MassScaleValue fromHecto(int|float|null $value)
- * @method MassScaleValue fromDeca(int|float|null $value)
- * @method MassScaleValue fromBase(int|float|null $value)
- * @method MassScaleValue fromDeci(int|float|null $value)
- * @method MassScaleValue fromCenti(int|float|null $value)
- * @method MassScaleValue fromMilli(int|float|null $value)
- * @method MassScaleValue fromMicro(int|float|null $value)
- * @method MassScaleValue fromNano(int|float|null $value)
- * @method MassScaleValue fromPico(int|float|null $value)
+ * @method static MassScaleValue fromTera(int|float|null $value)
+ * @method static MassScaleValue fromGiga(int|float|null $value)
+ * @method static MassScaleValue fromTon(int|float|null $value)
+ * @method static MassScaleValue fromQuintal(int|float|null $value)
+ * @method static MassScaleValue fromKilo(int|float|null $value)
+ * @method static MassScaleValue fromHecto(int|float|null $value)
+ * @method static MassScaleValue fromDeca(int|float|null $value)
+ * @method static MassScaleValue fromBase(int|float|null $value)
+ * @method static MassScaleValue fromDeci(int|float|null $value)
+ * @method static MassScaleValue fromCenti(int|float|null $value)
+ * @method static MassScaleValue fromMilli(int|float|null $value)
+ * @method static MassScaleValue fromMicro(int|float|null $value)
+ * @method static MassScaleValue fromNano(int|float|null $value)
+ * @method static MassScaleValue fromPico(int|float|null $value)
  *
  * @version 1.0.0
  */
