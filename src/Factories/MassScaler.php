@@ -10,46 +10,47 @@
  * @author     Vidda <vidda@ascetik.fr>
  */
 
- declare(strict_types=1);
+declare(strict_types=1);
 
 namespace Ascetik\UnitscaleMass\Factories;
 
-use Ascetik\UnitscaleCore\Extensions\AdjustedValue;
-use Ascetik\UnitscaleCore\Parsers\ScaleCommandParser;
 use Ascetik\UnitscaleCore\Types\ScaleValueFactory;
+use Ascetik\UnitscaleCore\Utils\PrefixedCommand;
 use Ascetik\UnitscaleMass\Values\MassScaleValue;
 
 /**
- * Build a MassScaleValue
+ * Build MassScaleValues
+ *
+ * @method MassScaleValue fromTera(int|float|null $value)
+ * @method MassScaleValue fromGiga(int|float|null $value)
+ * @method MassScaleValue fromTon(int|float|null $value)
+ * @method MassScaleValue fromQuintal(int|float|null $value)
+ * @method MassScaleValue fromKilo(int|float|null $value)
+ * @method MassScaleValue fromHecto(int|float|null $value)
+ * @method MassScaleValue fromDeca(int|float|null $value)
+ * @method MassScaleValue fromBase(int|float|null $value)
+ * @method MassScaleValue fromDeci(int|float|null $value)
+ * @method MassScaleValue fromCenti(int|float|null $value)
+ * @method MassScaleValue fromMilli(int|float|null $value)
+ * @method MassScaleValue fromMicro(int|float|null $value)
+ * @method MassScaleValue fromNano(int|float|null $value)
+ * @method MassScaleValue fromPico(int|float|null $value)
  *
  * @version 1.0.0
  */
-class MassScaler implements ScaleValueFactory
+class MassScaler extends ScaleValueFactory
 {
     public static function unit(int|float $value): MassScaleValue
     {
         return new MassScaleValue($value);
     }
 
-
-    /**
-     * Use commands prefixed by "from"
-     *
-     * @param  string $method prefixed ScaleFactory method
-     * @param  mixed  $args   value and unit to use,
-     *
-     * @return void
-     */
-    public static function __callStatic(string $method, $args): MassScaleValue
+    protected static function createWithCommand(PrefixedCommand $command, array $args = []): MassScaleValue
     {
-        $checker = new ScaleCommandParser('from');
-        $command = $checker->parse($method)->name;
-        [$value, $unit] = match (count($args)) {
-            2 => [...$args],
-            1 => [$args[0], ''],
-            default => [0, '']
+        $value = match (count($args)) {
+            1 => $args[0],
+            default => 0
         };
-        return MassScaleValue::createFromScale((float) $value, $command, $unit);
+        return MassScaleValue::createFromScale((float) $value, $command->name);
     }
-
 }
