@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This is part of the UnitScale package.
  *

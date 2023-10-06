@@ -1,5 +1,17 @@
 # unitscale-mass
 
+An extension of unitscale to use with mass unit (g, gramms), including quintal and ton scales.
+
+## Release notes
+
+Version 0.2
+
+- Had to follow core package updates
+
+## Breaking changes
+
+- See ascetik/unitscale-core package README file.
+
 ### Mass conversion
 
 Mass conversion is specialized in mass measurement multiples, adding ton (t) and quintal(q).
@@ -27,19 +39,10 @@ Using ton and quintal is quite simple :
 
 ```php
 
-$quintal = $unit->fromQuintal();
+$quintal = MassScaler:::fromQuintal(30);
 echo $quintal; // prints "30q"
 echo $quintal->toKilo(); // prints "3000kg"
-echo $quintal->toTon(); // prints "3t"
 
-```
-
-Of course, you can chain methods :
-
-```php
-
-echo MassScaler::unit(30)
-    ->fromQuintal()
-    ->toTon(); // prints "3t"
+echo MassScaler::fromKilo(300)->toTon(); // prints "3t"
 
 ```
