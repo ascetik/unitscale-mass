@@ -4,19 +4,18 @@ An extension of unitscale to use with mass unit (g, gramms), including quintal a
 
 ## Release notes
 
-Version 1.0.0
+Version 1.1.0
 
-- Had to follow core package updates
+- Simplified Scale build : MassScale implementation removed. CustomScales are used with fully qualified unit, including prefix.
 
 ## Breaking changes
 
 - See ascetik/unitscale-core package README file.
 
-### Mass conversion
+### Usage
 
-Mass conversion is specialized in mass measurement multiples, adding ton (t) and quintal(q).
-It uses mass unit (g, gram) as unit to prefix.
-Custom converter could be enough but does not use ton and quintal...
+Mass conversion is specialized in mass unit (g) multiples, adding ton (t) and quintal(q).
+It works just like CustomScaler, using only mass (g, grams) as unit to prefix.
 
 To get an instance of the mass converter :
 
