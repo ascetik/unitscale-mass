@@ -19,7 +19,6 @@ use Ascetik\UnitscaleCore\Types\Scale;
 use Ascetik\UnitscaleCore\Types\ScaleFactory;
 use Ascetik\UnitscaleCore\Types\ScaleValue;
 use Ascetik\UnitscaleMass\Factories\MassScaleFactory;
-use Ascetik\UnitscaleMass\Scales\MassScale;
 
 /**
  * Scale value reserved to mass (g)
@@ -56,14 +55,6 @@ class MassScaleValue extends ScaleValue
         parent::__construct($value, $scale);
     }
     
-    /** @override */
-    public function getUnit(): string
-    {
-        return $this->scale instanceof MassScale
-            ? parent::getUnit()
-            : $this->scale->unit() . 'g';
-    }
-
     public static function selector(): ScaleFactory
     {
         return new MassScaleFactory();
